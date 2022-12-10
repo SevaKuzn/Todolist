@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Список дел на вторник</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css"/>
+    </head>
+    <body>
+        <h1>Мой список дел на вторник</h1>
+        <ol>
+            {% for todo in todo_list %}
+            <li>{{ todo }}</li>
+            {% endfor %}
+        </ol>
+        <a href="/">Вернуться</a>
+    </body>
+</html>

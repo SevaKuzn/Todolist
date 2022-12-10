@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-
+from core.views import monday
+from core.views import tuesday
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", TemplateView.as_view(template_name='index.html')),
+    path("monday", monday),
+    path("tuesday", tuesday),
+    path("wednesday", TemplateView.as_view(template_name='wednesday.html')),
+    path("thursday", TemplateView.as_view(template_name='thursday.html'))
 ]
 
